@@ -11,7 +11,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '11'
 libnetcdf:
-- 4.7.4
+- 4.8.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pin_run_as_build:
