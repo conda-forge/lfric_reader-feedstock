@@ -1,5 +1,5 @@
 {% set name = "lfric_reader" %}
-{% set version = "0.9" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/niwa/lfric_reader/archive/v{{ version }}.tar.gz
-  sha256: bbcb146b5c93a9c7e541380745d890742bc89e496b6edc6cb05d411ea810995f
+  sha256: bce1daacd431526a603eb3e78b44a6b241484b24c180fa3d9d7edcad537a0910
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
