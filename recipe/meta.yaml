@@ -36,8 +36,8 @@ requirements:
 
 test:
   commands:
-    - python -c "import paraview.simple as pvs; pvs.LoadPlugin('$PREFIX/lib/netCDFLFRicReader/netCDFLFRicReader.so')" # [not win]
-    - python -c "import paraview.simple as pvs; pvs.LoadPlugin(r'%PREFIX%\Library\bin\netCDFLFRicReader\netCDFLFRicReader.dll')" # [win]
+    - python -c "import paraview.simple as pvs; pvs.LoadPlugin('$PREFIX/lib/netCDFLFRicReader/netCDFLFRicReader.so')"  # [not win]
+    - python -c "import paraview.simple as pvs; pvs.LoadPlugin(r'%PREFIX%\Library\bin\netCDFLFRicReader\netCDFLFRicReader.dll')"  # [win]
     - python -c "import paraview.simple as pvs; assert 'NetCDFLFRicReader' in dir(pvs)"
 
 about:
