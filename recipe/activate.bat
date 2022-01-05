@@ -1,0 +1,4 @@
+if defined PV_PLUGIN_PATH (
+    set PV_PLUGIN_PATH_CONDA_BACKUP=%PV_PLUGIN_PATH%
+)
+set PV_PLUGIN_PATH=%CONDA_PREFIX%\Library\bin\netCDFLFRicReader
