@@ -11,9 +11,12 @@ source:
 
 build:
   number: 0
+  skip: true  # [win and py>38]
 
 requirements:
   build:
+    ignore_run_exports:
+      - libnetcdf  # [win]
     - {{ compiler('cxx') }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
@@ -35,10 +38,11 @@ requirements:
     - python
 
 test:
+  imports:
+    - NetCDFLFRicReader
   commands:
     - python -c "import paraview.simple as pvs; pvs.LoadPlugin('$PREFIX/lib/netCDFLFRicReader/netCDFLFRicReader.so')"  # [not win]
     - python -c "import paraview.simple as pvs; pvs.LoadPlugin(r'%PREFIX%\Library\bin\netCDFLFRicReader\netCDFLFRicReader.dll')"  # [win]
-    - python -c "import paraview.simple as pvs; assert 'NetCDFLFRicReader' in dir(pvs)"
 
 about:
   home: https://github.com/niwa/lfric_reader
