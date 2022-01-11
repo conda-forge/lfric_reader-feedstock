@@ -1,5 +1,5 @@
 {% set name = "lfric_reader" %}
-{% set version = "0.9" %}
+{% set version = "0.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/niwa/lfric_reader/archive/v{{ version }}.tar.gz
-  sha256: bbcb146b5c93a9c7e541380745d890742bc89e496b6edc6cb05d411ea810995f
+  sha256: f4fc79e81c82b0265484b20ff4cd95293557181dca9b8072c6373e4b369797c1
 
 build:
-  number: 1
-  skip: true  # [win]
+  number: 0
+  skip: true  # [win and py>38]
 
 requirements:
   build:
@@ -22,12 +22,13 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
     - {{ cdt('libxext') }}     # [linux]
+    - make  # [unix]
     - cmake
   host:
     - paraview
     - python
     - libnetcdf
-    - boost
+    - boost-cpp
     - eigen
     - xorg-libxfixes  # [linux]
   run:
@@ -36,7 +37,8 @@ requirements:
 
 test:
   commands:
-    - python -c "import paraview.simple as pvs; pvs.LoadPlugin('$PREFIX/lib/netCDFLFRicReader/netCDFLFRicReader.so')"
+    - python -c "import paraview.simple as pvs; pvs.LoadPlugin('$PREFIX/lib/netCDFLFRicReader/netCDFLFRicReader.so')"  # [not win]
+    - python -c "import paraview.simple as pvs; pvs.LoadPlugin(r'%PREFIX%\Library\bin\netCDFLFRicReader\netCDFLFRicReader.dll')"  # [win]
 
 about:
   home: https://github.com/niwa/lfric_reader
