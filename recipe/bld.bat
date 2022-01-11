@@ -8,6 +8,8 @@ cmake %CMAKE_ARGS% CMakeLists.txt ^
       -DCMAKE_INSTALL_PREFIX="%PREFIX%" ^
       -DBUILD_SHARED_LIBS=ON ^
       -DBUILD_TESTING=OFF ^
+      -DPython3_FIND_STRATEGY=LOCATION ^
+      -DPython3_ROOT_DIR="%PREFIX%" ^
       -DLZMA_LIBRARY="%LIBRARY_PREFIX%/lib/liblzma.lib" ^
       -DCMAKE_CXX_FLAGS="-I%LIBRARY_PREFIX%/include" ^
       -G "NMake Makefiles"
