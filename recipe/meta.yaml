@@ -12,8 +12,6 @@ source:
 build:
   number: 0
   skip: true  # [win and py>38]
-  ignore_run_exports:
-    - libnetcdf  # [win]
 
 requirements:
   build:
@@ -30,7 +28,7 @@ requirements:
     - paraview
     - python
     - libnetcdf
-    - boost
+    - boost-cpp
     - eigen
     - xorg-libxfixes  # [linux]
   run:
@@ -38,8 +36,6 @@ requirements:
     - python
 
 test:
-  imports:
-    - NetCDFLFRicReader
   commands:
     - python -c "import paraview.simple as pvs; pvs.LoadPlugin('$PREFIX/lib/netCDFLFRicReader/netCDFLFRicReader.so')"  # [not win]
     - python -c "import paraview.simple as pvs; pvs.LoadPlugin(r'%PREFIX%\Library\bin\netCDFLFRicReader\netCDFLFRicReader.dll')"  # [win]
