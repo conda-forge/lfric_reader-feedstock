@@ -1,2 +1,5 @@
 libnetcdf: 4.7.4  # [win]
 boost_cpp: 1.72.0  # [win]
+paraview:
+  - 5.* # [win]
+  - 5.* *_qt  # [not win]
