@@ -18,6 +18,10 @@ if errorlevel 1 exit 1
 cmake --build . --target install --config Release
 if errorlevel 1 exit 1
 
+cd ..\..
+"%PYTHON%" -m pip install --no-deps --ignore-installed .
+if errorlevel 1 exit 1
+
 mkdir "%PREFIX%\etc\conda\activate.d"
 copy "%RECIPE_DIR%\activate.bat" "%PREFIX%\etc\conda\activate.d\%PKG_NAME%_activate.bat"
 

@@ -26,6 +26,8 @@ requirements:
   host:
     - paraview
     - python
+    - pip
+    - setuptools_scm
     - libnetcdf
     - boost-cpp
     - eigen
@@ -33,11 +35,13 @@ requirements:
   run:
     - paraview
     - python
+    - netcdf4
 
 test:
   commands:
     - python -c "import paraview.simple as pvs; pvs.LoadPlugin('$PREFIX/lib/netCDFLFRicReader/netCDFLFRicReader.so')"  # [not win]
     - python -c "import paraview.simple as pvs; pvs.LoadPlugin(r'%PREFIX%\Library\bin\netCDFLFRicReader\netCDFLFRicReader.dll')"  # [win]
+    - replace_ugrid_metadata -h
 
 about:
   home: https://github.com/niwa/lfric_reader
