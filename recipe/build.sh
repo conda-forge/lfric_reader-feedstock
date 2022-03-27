@@ -7,6 +7,9 @@ cmake ${CMAKE_ARGS} CMakeLists.txt \
       -DOPENGL_opengl_LIBRARY=${BUILD_PREFIX}/${HOST}/sysroot/usr/lib64/libGL.so
 cmake --build . --target install --config Release
 
+cd ../..
+${PYTHON} -m pip install --no-deps --ignore-installed .
+
 # Copy the [de]activate scripts to $PREFIX/etc/conda/[de]activate.d.
 # This will allow them to be run on environment activation.
 for CHANGE in "activate" "deactivate"
