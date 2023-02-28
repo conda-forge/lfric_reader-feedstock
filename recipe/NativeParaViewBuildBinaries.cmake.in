@@ -1,0 +1,18 @@
+# Use native binaries on build host in case of cross-compilation,
+# see ParaView feedstock for further details
+set(MAJ_MIN ${PARAVIEW_VERSION_MAJOR}.${PARAVIEW_VERSION_MINOR})
+
+add_executable(ParaView::ProcessXML IMPORTED GLOBAL)
+set_property(TARGET ParaView::ProcessXML PROPERTY IMPORTED_LOCATION $ENV{BUILD_PREFIX}/bin/vtkProcessXML-pv${MAJ_MIN})
+
+add_executable(ParaView::WrapClientServer IMPORTED GLOBAL)
+set_property(TARGET ParaView::WrapClientServer PROPERTY IMPORTED_LOCATION $ENV{BUILD_PREFIX}/bin/vtkWrapClientServer-pv${MAJ_MIN})
+
+add_executable(VTK::WrapHierarchy IMPORTED GLOBAL)
+set_property(TARGET VTK::WrapHierarchy PROPERTY IMPORTED_LOCATION $ENV{BUILD_PREFIX}/bin/vtkWrapHierarchy-pv${MAJ_MIN})
+
+add_executable(VTK::WrapPython IMPORTED GLOBAL)
+set_property(TARGET VTK::WrapPython PROPERTY IMPORTED_LOCATION $ENV{BUILD_PREFIX}/bin/vtkWrapPython-pv${MAJ_MIN})
+
+add_executable(VTK::WrapPythonInit IMPORTED GLOBAL)
+set_property(TARGET VTK::WrapPythonInit PROPERTY IMPORTED_LOCATION $ENV{BUILD_PREFIX}/bin/vtkWrapPythonInit-pv${MAJ_MIN})

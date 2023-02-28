@@ -1,3 +1,12 @@
+#!/bin/sh
+
+# ParaView requires native binaries at build time, point to the build
+# system to the binaries in the native ParaView package
+if test "${CONDA_BUILD_CROSS_COMPILATION}" == "1"; then
+    PV_TARGETS_FILE=$(find ${PREFIX}/lib/cmake -name ParaView-targets.cmake)
+    cat NativeParaViewBuildBinaries.cmake.in >> ${PV_TARGETS_FILE}
+fi
+
 cd src/cxx
 cmake ${CMAKE_ARGS} CMakeLists.txt \
       -DCMAKE_BUILD_TYPE=Release \
