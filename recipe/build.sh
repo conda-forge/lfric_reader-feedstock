@@ -4,7 +4,7 @@
 # system to the binaries in the native ParaView package
 if test "${CONDA_BUILD_CROSS_COMPILATION}" == "1"; then
     PV_TARGETS_FILE=$(find ${PREFIX}/lib/cmake -name ParaView-targets.cmake)
-    cat NativeParaViewBuildBinaries.cmake.in >> ${PV_TARGETS_FILE}
+    cat ${RECIPE_DIR}/NativeParaViewBuildBinaries.cmake.in >> ${PV_TARGETS_FILE}
 fi
 
 cd src/cxx
