@@ -23,9 +23,6 @@ requirements:
     - {{ cdt('libxext') }}     # [linux]
     - make  # [unix]
     - cmake
-    - paraview  # [build_platform != target_platform]
-    - python    # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}  # [build_platform != target_platform]
   host:
     - paraview
     - python
