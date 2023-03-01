@@ -1,11 +1,11 @@
-About lfric_reader
-==================
+About lfric_reader-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lfric_reader-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/niwa/lfric_reader
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lfric_reader-feedstock/blob/main/LICENSE.txt)
 
 Summary: ParaView plugin that reads output from the LFRic code in netCDF UGRID format
 
