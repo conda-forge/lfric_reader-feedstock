@@ -28,6 +28,7 @@ requirements:
     - python
     - pip
     - setuptools_scm
+    - expat
     - libnetcdf
     - boost-cpp
     - eigen
