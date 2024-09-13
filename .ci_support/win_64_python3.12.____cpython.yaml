@@ -1,3 +1,5 @@
+c_stdlib:
+- vs
 channel_sources:
 - conda-forge
 channel_targets:
@@ -6,6 +8,8 @@ cxx_compiler:
 - vs2019
 expat:
 - '2'
+libboost_headers:
+- '1.86'
 libnetcdf:
 - 4.9.2
 paraview:
