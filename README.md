@@ -152,7 +152,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-lfric_reader-green.svg)](https://anaconda.org/conda-forge/lfric_reader) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lfric_reader.svg)](https://anaconda.org/conda-forge/lfric_reader) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lfric_reader.svg)](https://anaconda.org/conda-forge/lfric_reader) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lfric_reader.svg)](https://anaconda.org/conda-forge/lfric_reader) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-lfric__reader-green.svg)](https://anaconda.org/conda-forge/lfric_reader) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/lfric_reader.svg)](https://anaconda.org/conda-forge/lfric_reader) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/lfric_reader.svg)](https://anaconda.org/conda-forge/lfric_reader) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/lfric_reader.svg)](https://anaconda.org/conda-forge/lfric_reader) |
 
 Installing lfric_reader
 =======================
