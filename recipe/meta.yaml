@@ -26,6 +26,7 @@ requirements:
     - cmake
   host:
     - paraview
+    - paraview * *_qt
     - python
     - pip
     - setuptools
