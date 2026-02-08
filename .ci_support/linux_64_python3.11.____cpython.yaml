@@ -19,7 +19,7 @@ expat:
 libboost_headers:
 - '1.88'
 libnetcdf:
-- 4.9.2
+- 4.9.3
 paraview:
 - 5.* *_qt
 pin_run_as_build:
