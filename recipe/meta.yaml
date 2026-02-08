@@ -28,6 +28,7 @@ requirements:
     - paraview
     - python
     - pip
+    - setuptools
     - setuptools_scm
     - expat
     - libnetcdf
