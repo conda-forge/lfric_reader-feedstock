@@ -10,18 +10,12 @@ source:
   sha256: 60e217cfae0e754d2edc383d26944857098390608c1b0a2e6d3339935ef515d1
 
 build:
-  number: 8
+  number: 9
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}     # [linux]
     - make  # [unix]
     - cmake
   host:
@@ -36,6 +30,7 @@ requirements:
     - cli11
     - nlohmann_json
     - xorg-libxfixes  # [linux]
+    - libgl-devel                    # [linux]
   run:
     - paraview
     - python
